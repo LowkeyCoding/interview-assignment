@@ -1,8 +1,8 @@
 CREATE TABLE users (
-  id varchar(36) NOT NULL,
-  firstName varchar(255) default NULL,
-  lastName varchar(255) default NULL,
-  email varchar(255) default NULL
+                       id varchar(36) NOT NULL,
+                       firstName varchar(255) default NULL,
+                       lastName varchar(255) default NULL,
+                       email varchar(255) default NULL
 );
 
 INSERT INTO users (id,firstName,lastName,email) VALUES ('0D00A443-93D3-8573-135D-8946397866A1','Hayes','Cruz','dui@aliquetsem.org'),('352AFADF-0A34-7933-7196-294A3AEEA6CE','Addison','Mcdonald','consectetuer.adipiscing.elit@Duissit.co.uk'),('2381734F-6F6C-1C04-C3C4-8C19F916CB4C','Dante','Hammond','et.arcu.imperdiet@euduiCum.ca'),('3CE4D4E4-D75B-577A-4D5E-2618FA753DEA','Vivien','Davis','Suspendisse.tristique@enimCurabiturmassa.net'),('35000341-23E2-BE57-DDFC-40CD7A26B4E8','Nehru','Moss','vel.turpis@condimentum.com'),('7D45EC5B-00E2-4740-A207-6281826FC959','Orlando','Cameron','elementum.lorem@arcuVestibulumante.com'),('1BDA141B-D319-92D6-D785-9C115D1D8EC5','Cheryl','Pitts','tortor.dictum.eu@cursus.edu'),('BFE85A37-944F-2375-BD31-B9E0B200469E','Rae','Aguilar','semper.dui.lectus@dui.com'),('994B5B47-54AF-D0EB-82E6-DDF8B99CD94D','Rafael','Flynn','sollicitudin.a.malesuada@nibh.edu'),('ABEB7090-D78F-1968-BCD2-4E68422005BD','Zachery','Peterson','vitae@vel.com');

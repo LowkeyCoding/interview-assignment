@@ -1,15 +1,18 @@
-# Job interview assignment
-We kindly ask you to solve the task below. By solving and submitting this assignment you provide us with insights in how you solve real-world problems. What we will be looking at are topics such as: choice of technology, structuring of code, use of VCS, selection of 3rd party libraries, documentation etc.
+# My solution
+This is a simple solution written in GO for deleting users from the database and writing a copy to a given output file. The output file is in the csv format.
 
-## The task
-Develop a solution that, given a select query, can read data from a database, write it to a local file and then delete the data from the database. The solution should verify that data is written to the file, and that data integrity is maintained, before deleting it from the database.
+The program is seperated into `Logic` in logic all functionality not directly on a model is stored. In `Models` structures and related functionality is stored. 
 
-- Use Bash, PHP, JavaScript or Go as the language
-- Use MySQL, MariaDB, CockroachDB or SQLite as the database
+## Usage
+Running `go run main.go` will run the program with default settings deleting the first user in the database.  
 
-Please use the data set provided in the SQL dump in this repo. Please also consider that your solution should be able to handle much larger data sets.
+To get a list of program arguments `-h` or `--help` can be used.  
+To set the output file path use `-path=<filename>`  
+To set the database connection string use `-db=<connectionString>`  
+To increase the limit of query use `-limit=<count>` zero is equivalent to no limit.
+To create a query use `-query=<string>`.
+Query strings can contain arguments, to add an argument to a query use a `?` instead of the value.  
+To parse arguments to query use `-args=<arguments>`. Arguments are seperated by `;` and if an argument contains multiple values separate them using `,`
 
-## Expectations
-Make a copy of this repo. Solve the task below. Push your code to a public repo, and send us the link as a reply to our email.
-
-Your solution should include a short readme describing your solution, how to use/test it and any final considerations such as known errors, next steps, security concerns etc. Don’t worry we are not expecting this thing to be perfect.
+## Security
+Arbitrary queries can be passed allowing a user to modify the database in an unintended way. 
